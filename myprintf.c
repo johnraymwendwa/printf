@@ -9,8 +9,23 @@ int myprintf(char* string, ...);
 /* Main function */
 int main (void)
 {
-char* text = "This is a custom function";
-myprintf(text);
+    int i;
+    char* text[5];
+    text[0] = "test 0";
+    text[1] = "This is test 1";
+    text[2] = "Test 2";
+    text[3] = "test 3";
+    text[4] = "END";
+    i = 0;
+
+    while (i != 5)
+    {
+        printf("%d\n",i);
+        myprintf(text[i]);
+        printf(text[i]);
+        i++;
+
+    }
 
 }
 
@@ -45,7 +60,8 @@ printf("\n");
 //TO-DO
 
 /*
-*Implement variable arguments
+*add a check specifier
+*Implement variable arguments and store in array
 *Link arguments to C data types
 *convert other datatypes to strings for print prep
 *return said string to myprintf
